@@ -49,6 +49,44 @@ if (document.querySelector(".js-filtro") != null) {
     })
 
     document.querySelector("#buscador").addEventListener("input", filtrarDispositivos)
+
+    let tarjetaDetalle = null
+
+    document.querySelectorAll(".js-boton-detalle").forEach(boton => {
+        boton.addEventListener("click", () => {
+            tarjetaDetalle = boton.closest(".js-tarjeta")
+            const etiquetas = tarjetaDetalle.querySelectorAll(".badge")
+
+            document.querySelector("#modal-detalle-titulo").textContent = tarjetaDetalle.dataset.nombre
+            document.querySelector("#modal-detalle-descripcion").textContent = tarjetaDetalle.querySelector(".card-text").textContent.trim()
+            document.querySelector("#modal-detalle-id").textContent = tarjetaDetalle.dataset.id
+            document.querySelector("#modal-detalle-tipo").textContent = etiquetas[0].textContent
+            document.querySelector("#modal-detalle-estado").textContent = etiquetas[1].textContent
+            document.querySelector("#modal-detalle-ip").textContent = tarjetaDetalle.dataset.ip
+            document.querySelector("#modal-detalle-ubicacion").textContent = tarjetaDetalle.dataset.ubicacion
+            document.querySelector("#modal-detalle-script").textContent = tarjetaDetalle.dataset.script
+        })
+    })
+
+    document.querySelector("#btn-alternar-estado").addEventListener("click", () => {
+        if (tarjetaDetalle == null) {
+            return
+        }
+        const etiquetaEstado = tarjetaDetalle.querySelectorAll(".badge")[1]
+
+        if (tarjetaDetalle.dataset.estado == "activo") {
+            tarjetaDetalle.dataset.estado = "inactivo"
+            etiquetaEstado.textContent = "Inactivo"
+            etiquetaEstado.classList.remove("text-bg-success")
+            etiquetaEstado.classList.add("text-bg-secondary")
+        } else {
+            tarjetaDetalle.dataset.estado = "activo"
+            etiquetaEstado.textContent = "Activo"
+            etiquetaEstado.classList.remove("text-bg-secondary")
+            etiquetaEstado.classList.add("text-bg-success")
+        }
+        document.querySelector("#modal-detalle-estado").textContent = etiquetaEstado.textContent
+    })
 }
 
 // ÁNGEL (index.html)
