@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-label="Esquema de la topología de red IoT Ringua en Cisco Packet Tracer">
+  <rect width="800" height="420" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+  <text x="400" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#0f172a">
+    Topología de Red IoT - Proyecto Ringua (Cisco Packet Tracer)
+  </text>
+  <text x="400" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#475569">
+    Placeholder: sustituye esta imagen por tu captura real de Packet Tracer en img/topologia-ringua.svg
+  </text>
+
+  <!-- Líneas de conexión -->
+  <line x1="190" y1="130" x2="360" y2="220" stroke="#0d6efd" stroke-width="2.5" stroke-dasharray="6,4" />
+  <line x1="190" y1="220" x2="360" y2="220" stroke="#0d6efd" stroke-width="2.5" stroke-dasharray="6,4" />
+  <line x1="190" y1="310" x2="360" y2="220" stroke="#198754" stroke-width="2.5" stroke-dasharray="6,4" />
+  <line x1="450" y1="220" x2="600" y2="165" stroke="#0f172a" stroke-width="3" />
+  <line x1="450" y1="220" x2="600" y2="285" stroke="#0f172a" stroke-width="3" />
+
+  <!-- Nodos Sensores / Actuadores -->
+  <rect x="50" y="100" width="140" height="60" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+  <text x="120" y="127" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0369a1">Sensores Agua/Temp</text>
+  <text x="120" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">Scripts Python</text>
+
+  <rect x="50" y="190" width="140" height="60" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
+  <text x="120" y="217" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0369a1">Humedad / Caudal</text>
+  <text x="120" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">Scripts Python</text>
+
+  <rect x="50" y="280" width="140" height="60" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2" />
+  <text x="120" y="307" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">Actuadores Riego</text>
+  <text x="120" y="325" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#0f172a">Válvula / Bomba / Alarma</text>
+
+  <!-- Nodo Gateway Central -->
+  <rect x="330" y="175" width="145" height="90" rx="12" fill="#0d6efd" />
+  <text x="402" y="212" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Home Gateway</text>
+  <text x="402" y="232" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#e0f2fe">Router / Reglas IoT</text>
+  <text x="402" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#bae6fd">192.168.10.1</text>
+
+  <!-- Nodos Servidor y Dashboard -->
+  <rect x="590" y="130" width="160" height="70" rx="10" fill="#f1f5f9" stroke="#334155" stroke-width="2" />
+  <text x="670" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Servidor IoT / DNS</text>
+  <text x="670" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Registro y telemetría</text>
+
+  <rect x="590" y="250" width="160" height="70" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2" />
+  <text x="670" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#92400e">Dashboard Web</text>
+  <text x="670" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#475569">Monitorización en red</text>
+</svg>
